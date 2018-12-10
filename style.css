@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loading {
+    font-size: 7px;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.triangle {
+   stroke-dasharray: 17;
+   animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 136;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }   
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+}
+
